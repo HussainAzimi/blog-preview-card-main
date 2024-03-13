@@ -1,0 +1,122 @@
+/* reset code */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* General Styles */
+
+html{
+    --c-white: hsl(0, 0%, 100%);
+    --c-black: hsl(0, 0%, 7%);
+    --c-yellow: hsl(47, 88%, 63%);
+    --c-grey: hsl(0, 0%, 50%);
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--c-yellow);
+    font-family: 'Figtree', sans-serif;
+}
+
+/* Card Styles */
+
+.card{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+}
+
+.card_container{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+max-width: 24rem;
+padding: 22px 23px 24px ;
+margin: 15px;
+background-color: var(--c-white);
+border: 1px solid var(--c-black);
+border-radius: 25px;
+box-shadow: 7px 7px var(--c-black);
+}
+
+.card_logo{
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 18px;
+    height: 200px;
+}
+
+.card_title{
+    font-size: 1rem;
+    font-weight: 750;
+    margin-bottom: 16px;
+    background-color: var(--c-yellow);
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.title_date{
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.title_details{
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+}
+
+.title_desc{
+    color: var(--c-grey);
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+.card_author{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.author_img{
+    height: 32px;
+    width: 32px;
+    border-radius: 35%;
+}
+
+.author_name{
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+/* Media Query */
+
+@media (max-width:  400px) {
+    .card{
+        min-width: 250px;
+    };
+
+    .card_logo{
+        height: unset;
+    }
+}
+
